@@ -14,6 +14,7 @@ fn example1() {
     {
         a1[2] = 5;
         println!("a1 = {:?}", a1);
+        eprintln!("a1 = {:?}", a1);
     }
 
     {
