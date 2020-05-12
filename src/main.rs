@@ -3,6 +3,13 @@ fn main() {
 
     example1();
     example2();
+
+    println!("{:?}", {
+        let v1 = vec![1, 2, 3];
+        let mut sum = 0;
+        v1.into_iter().for_each(|x| sum += x);
+        sum
+    })
 }
 
 fn example1() {
