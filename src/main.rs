@@ -1,3 +1,5 @@
+use std::num::NonZeroUsize;
+
 fn main() {
     println!("Hello, world!");
 
@@ -9,7 +11,12 @@ fn main() {
         let mut sum = 0;
         v1.into_iter().for_each(|x| sum += x);
         sum
-    })
+    });
+
+    {
+        let x: NonZeroUsize = NonZeroUsize::new(1).unwrap();
+        println!("{}", x);
+    }
 }
 
 fn example1() {
