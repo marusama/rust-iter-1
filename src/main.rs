@@ -114,7 +114,7 @@ fn example1() {
         let mut sum = 0;
         let iter = a1.iter(); // a1.into_iter();
         for x in iter {
-            sum += x;
+            sum += *x;
         }
 
         println!("a1 = {:?}, sum = {}", a1, sum);
@@ -144,7 +144,7 @@ fn example2() {
 
         let mut sum = 0;
         for x in v1.iter() {
-            sum += x;
+            sum += *x;
         }
 
         println!("v1 = {:?} sum = {}", v1, sum);
