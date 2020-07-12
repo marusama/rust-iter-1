@@ -205,4 +205,14 @@ fn example2() {
         let v2: Vec<_> = v1.iter_mut().filter(|x| **x > 1).map(|x| *x * *x).collect();
         println!("v2 = {:?}, cap = {}", v2, v2.capacity());
     }
+
+    // chunks
+    {
+        let v1 = vec![1, 2, 3, 4, 5];
+        println!("v1 = {:?}, cap = {}", v1, v1.capacity());
+
+        for x in v1.chunks(2) {
+            println!("x = {:#?}", x);
+        }
+    }
 }
